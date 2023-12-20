@@ -22,7 +22,7 @@ from src.condensed2CoeusLanguage import condensed2CoeusLanguage
 
 def naturalLanguage2CoeusLanguage(question,model="gpt-4-0314"):
     #condense the question
-    condensed_sentence = condenseQuestion(question,model)
+    condensed_sentence,total_tokens = condenseQuestion(question,model)
     #convert the condensed question to coeus language
     coeus_sentence = condensed2CoeusLanguage(condensed_sentence)
     return coeus_sentence
