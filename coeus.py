@@ -21,7 +21,7 @@ def coeus(question):
     print('---')
     #convert question to Coeus language
     question = naturalLanguage2CoeusLanguage(question)
-    print(f'Question in Coeus language: {question}')
+    #print(f'Question in Coeus language: {question}')
     #split the question into the desired variable and the formulas
     problem_parts = re.split(': ',question.replace('-->',''))
     words = problem_parts[0]

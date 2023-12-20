@@ -26,7 +26,6 @@ def executeSolvingPlan(solve_statements,var):
     i_ss = 0
     #loop through each step in the solving plan
     for q in solve_statements:
-        print(f'Step {i_ss}: {q}')
         i_ss += 1
         #get the variable of interest for this step
         voi = re.split(' ',re.split(':',q)[0])[-1]
@@ -42,6 +41,7 @@ def executeSolvingPlan(solve_statements,var):
                 coeff_dict[voi] = v2.strip()
             elif v2.strip() == voi:
                 coeff_dict[voi] = v1.strip()
+        print(f'{i_ss}: {q} {a}')
 
     #simplify coeff_dict
     for k,v in coeff_dict.items():
@@ -65,6 +65,7 @@ def executeSolvingPlan(solve_statements,var):
             break
     #simplify answer 
     a = a.replace('s*q*r*t','sqrt')
+    print('SIMPLIFYING ANSWER')
     a = simplify_formula(a)
     return a
 
