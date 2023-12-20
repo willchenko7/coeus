@@ -13,7 +13,7 @@ Outputs:
 
 Example:
     Input:  {'time_in_hours': 'eq1', 'miles_per_hour': 'eq0', 'distance_travelled': 'eq2'}
-    Output: ['Solve for distance_travelled: miles_per_hour=60;time_in_hours=2;distance_travelled=miles_per_hour*time_in_hours']
+    Output: ['Solve for time_in_hours: time_in_hours=2 -->', 'Solve for miles_per_hour:  miles_per_hour=60 -->', 'Solve for distance_travelled: distance_travelled=miles_per_hour*time_in_hours -->']
 '''
 
 def fillOutHypergraphPath(path,formula_dictionary,var):
