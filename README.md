@@ -17,3 +17,11 @@ Below a simple question is passed through this flow to demonstrate how it works.
 
 # Setup
 Create a src/config.json file that contains the path to your openai keys. Refer to config_template.json for formatting.
+
+# Usage
+You can use Coeus by modifying the script portion of coeus.py by adding your own question.
+
+# Next Steps
+The overarching goal of coeus is to solve challenging problems for mankind that have never been solved before. 
+To reach that goal, we need to allow all known formulas to be accessed in solving a problem, not just ones deemed relevant by the LLM. Obviously it could miss crucial context.
+Therefore, we need to have a database of known formulas, and situations of when they are applicable, and then have the LLM only use variables and formulas that are in that database. In this way, we could allow all known formulas to be at hand for solving a problem, and potentially link things together that have never been done before.
